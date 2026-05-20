@@ -185,16 +185,21 @@
   <h2 data-i18n="cmd_title">Commands</h2>
   <table>
     <tr><th data-i18n="cmd_th_cmd">Command</th><th data-i18n="cmd_th_desc">Description</th></tr>
-    <tr><td>!registrar Name#TAG</td><td data-i18n="cmd_registrar">Register your Riot account</td></tr>
-    <tr><td>!elos</td><td data-i18n="cmd_elos">Show server leaderboard</td></tr>
-    <tr><td>!elo [player]</td><td data-i18n="cmd_elo">Ranked info for a player</td></tr>
-    <tr><td>!kda [player]</td><td data-i18n="cmd_kda">KDA and champion stats</td></tr>
-    <tr><td>!analisar [player]</td><td data-i18n="cmd_analisar">AI-assisted match analysis</td></tr>
-    <tr><td>!comparar X vs Y</td><td data-i18n="cmd_comparar">Compare two players</td></tr>
-    <tr><td>!confronto X vs Y</td><td data-i18n="cmd_confronto">Head-to-head history with AI commentary</td></tr>
-    <tr><td>!ingame [player]</td><td data-i18n="cmd_ingame">Check if player is in a live game</td></tr>
-    <tr><td>!melhor</td><td data-i18n="cmd_melhor">Best performers of the season</td></tr>
-    <tr><td>!resumo</td><td data-i18n="cmd_resumo">Daily activity summary</td></tr>
+    <tr><td>!registrar &lt;Name#TAG&gt;</td><td data-i18n="cmd_registrar">Register your LoL account — e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code></td></tr>
+    <tr><td>!elos  /  !elosdacomunidade</td><td data-i18n="cmd_elos">Solo/Duo ranking of all members</td></tr>
+    <tr><td>!eloflex  /  !elo flex</td><td data-i18n="cmd_eloflex">Flex ranking of all members</td></tr>
+    <tr><td>!elo [player]</td><td data-i18n="cmd_elo">Detailed elo of a player (omit name to see yours)</td></tr>
+    <tr><td>!kda [player]</td><td data-i18n="cmd_kda">KDA from last 20 ranked games</td></tr>
+    <tr><td>!maestria [player]</td><td data-i18n="cmd_maestria">Top 7 champion masteries</td></tr>
+    <tr><td>!analisar [player]</td><td data-i18n="cmd_analisar">AI profile analysis — strengths, weaknesses and tips</td></tr>
+    <tr><td>!comparar &lt;p1&gt; vs &lt;p2&gt;</td><td data-i18n="cmd_comparar">1v1 comparison between two players with AI</td></tr>
+    <tr><td>!confronto &lt;p1&gt; vs &lt;p2&gt;</td><td data-i18n="cmd_confronto">Head-to-head history with AI commentary</td></tr>
+    <tr><td>!melhor &lt;role&gt;</td><td data-i18n="cmd_melhor">Top 5 in the community by role (top · jungle · mid · adc · suporte)</td></tr>
+    <tr><td>!ingame  /  !partida</td><td data-i18n="cmd_ingame">Shows who is currently in a game</td></tr>
+    <tr><td>!players  /  !jogadores</td><td data-i18n="cmd_players">List all registered members</td></tr>
+    <tr><td>!resumo</td><td data-i18n="cmd_resumo">Generate the daily summary in this channel</td></tr>
+    <tr><td>!language pt_BR / en_US</td><td data-i18n="cmd_language">Change the bot language for this server (admin)</td></tr>
+    <tr><td>!ajuda  /  !help</td><td data-i18n="cmd_help">Shows this command list</td></tr>
   </table>
 </div>
 
@@ -262,16 +267,21 @@
       cmd_title: "Commands",
       cmd_th_cmd: "Command",
       cmd_th_desc: "Description",
-      cmd_registrar: "Register your Riot account",
-      cmd_elos: "Show server leaderboard",
-      cmd_elo: "Ranked info for a player",
-      cmd_kda: "KDA and champion stats",
-      cmd_analisar: "AI-assisted match analysis",
-      cmd_comparar: "Compare two players",
+      cmd_registrar: 'Register your LoL account — e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code>',
+      cmd_elos: "Solo/Duo ranking of all members",
+      cmd_eloflex: "Flex ranking of all members",
+      cmd_elo: "Detailed elo of a player (omit name to see yours)",
+      cmd_kda: "KDA from last 20 ranked games",
+      cmd_maestria: "Top 7 champion masteries",
+      cmd_analisar: "AI profile analysis — strengths, weaknesses and tips",
+      cmd_comparar: "1v1 comparison between two players with AI",
       cmd_confronto: "Head-to-head history with AI commentary",
-      cmd_ingame: "Check if player is in a live game",
-      cmd_melhor: "Best performers of the season",
-      cmd_resumo: "Daily activity summary",
+      cmd_melhor: "Top 5 in the community by role (top · jungle · mid · adc · suporte)",
+      cmd_ingame: "Shows who is currently in a game",
+      cmd_players: "List all registered members",
+      cmd_resumo: "Generate the daily summary in this channel",
+      cmd_language: "Change the bot language for this server (admin)",
+      cmd_help: "Shows this command list",
       demo_title: "Try It Live",
       demo_p: 'Join the demo Discord server to test all bot features in real time. Register your Riot account with <code style="color:#79c0ff;">!registrar Name#TAG</code> and explore leaderboards, AI analysis, and match notifications.',
       btn_demo: "Join Demo Server",
@@ -302,16 +312,21 @@
       cmd_title: "Comandos",
       cmd_th_cmd: "Comando",
       cmd_th_desc: "Descrição",
-      cmd_registrar: "Registrar sua conta Riot",
-      cmd_elos: "Ver ranking do servidor",
-      cmd_elo: "Info ranqueada de um jogador",
-      cmd_kda: "Estatísticas de KDA e campeões",
-      cmd_analisar: "Análise de partida com IA",
-      cmd_comparar: "Comparar dois jogadores",
-      cmd_confronto: "Histórico de confrontos com comentário IA",
-      cmd_ingame: "Verificar se o jogador está em partida",
-      cmd_melhor: "Melhores jogadores da temporada",
-      cmd_resumo: "Resumo diário de atividades",
+      cmd_registrar: 'Registra sua conta do LoL — ex: <code style="color:#79c0ff">!registrar IDV Koala#BR1</code>',
+      cmd_elos: "Ranking Solo/Duo de todos os membros",
+      cmd_eloflex: "Ranking Flex de todos os membros",
+      cmd_elo: "Elo detalhado de um jogador (sem nome: mostra o seu)",
+      cmd_kda: "KDA das últimas 20 partidas ranked",
+      cmd_maestria: "Top 7 maestrias de campeão",
+      cmd_analisar: "Análise de perfil com IA — pontos fortes, fracos e dicas",
+      cmd_comparar: "Comparação 1v1 entre dois jogadores com IA",
+      cmd_confronto: "Histórico de confrontos com comentário de IA",
+      cmd_melhor: "Top 5 da comunidade por posição (top · jungle · mid · adc · suporte)",
+      cmd_ingame: "Mostra quem está em partida agora",
+      cmd_players: "Lista todos os membros registrados",
+      cmd_resumo: "Gera o resumo do dia neste canal",
+      cmd_language: "Altera o idioma do bot para este servidor (admin)",
+      cmd_help: "Mostra esta lista de comandos",
       demo_title: "Experimente ao Vivo",
       demo_p: 'Entre no servidor demo para testar todas as funções do bot em tempo real. Registre sua conta Riot com <code style="color:#79c0ff;">!registrar Nome#TAG</code> e explore rankings, análises com IA e notificações de partidas.',
       btn_demo: "Entrar no Servidor Demo",
