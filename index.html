@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LoL Community Tracker — Discord Bot</title>
+  <meta property="og:title" content="LoL Community Tracker — Discord Bot" />
+  <meta property="og:description" content="Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups — all inside your Discord server." />
+  <meta property="og:image" content="https://ozlima.github.io/lol-tracker/banner-en.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://ozlima.github.io/lol-tracker/banner-en.png" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -121,6 +127,11 @@
     /* ── Logos ── */
     .nav-logo { width: 30px; height: 30px; object-fit: contain; border-radius: 50%; }
     .hero-logo { width: 150px; height: 150px; object-fit: contain; border-radius: 50%; margin-bottom: 1.6rem; }
+    .hero-banner {
+      display: block; max-width: 860px; width: 100%; margin: 2.5rem auto 0;
+      border-radius: 10px; border: 1px solid #30363d;
+      box-shadow: 0 8px 32px #0008;
+    }
 
     /* ── Discord SVG icon ── */
     .ic-discord { width: 18px; height: 18px; flex-shrink: 0; }
@@ -154,6 +165,7 @@
     </a>
     <a href="privacy.html" class="cta" data-i18n="btn_privacy">View Privacy Policy</a>
   </div>
+  <img id="heroBanner" class="hero-banner lang-banner" src="banner-en.png" alt="LoL Tracker bot preview">
 </section>
 
 <div class="features">
@@ -356,6 +368,8 @@
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
     const logoSrc = lang === "en" ? "logo-en.png" : "logo-pt.png";
     document.querySelectorAll(".lang-logo").forEach(img => { img.src = logoSrc; });
+    const bannerSrc = lang === "en" ? "banner-en.png" : "banner-pt.png";
+    document.querySelectorAll(".lang-banner").forEach(img => { img.src = bannerSrc; });
   }
 
   function toggleLang() {
