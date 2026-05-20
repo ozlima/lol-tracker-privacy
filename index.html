@@ -215,8 +215,8 @@
     <tr><th data-i18n="cmd_th_cmd">Command</th><th data-i18n="cmd_th_desc">Description</th></tr>
     <tr><td data-i18n="cmd_name_registrar">!registrar &lt;Name#TAG&gt;</td><td data-i18n="cmd_registrar">Register your LoL account — e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code></td></tr>
     <tr><td>!elos  /  !elosdacomunidade</td><td data-i18n="cmd_elos">Solo/Duo ranking of all members</td></tr>
-    <tr><td>!eloflex  /  !elo flex</td><td data-i18n="cmd_eloflex">Flex ranking of all members</td></tr>
-    <tr><td data-i18n="cmd_name_elo">!elo [player]</td><td data-i18n="cmd_elo">Detailed elo of a player (omit name to see yours)</td></tr>
+    <tr><td data-i18n="cmd_name_eloflex">!rank flex / !ranking flex</td><td data-i18n="cmd_eloflex">Flex ranking of all members</td></tr>
+    <tr><td data-i18n="cmd_name_elo">!rank / !ranking [player]</td><td data-i18n="cmd_elo">Detailed elo of a player (omit name to see yours)</td></tr>
     <tr><td data-i18n="cmd_name_kda">!kda [player]</td><td data-i18n="cmd_kda">KDA from last 20 ranked games</td></tr>
     <tr><td data-i18n="cmd_name_maestria">!mastery / !maestria [player]</td><td data-i18n="cmd_maestria">Top 7 champion masteries</td></tr>
     <tr><td data-i18n="cmd_name_analisar">!analyze / !analisar [player]</td><td data-i18n="cmd_analisar">AI profile analysis — strengths, weaknesses and tips</td></tr>
@@ -225,7 +225,7 @@
     <tr><td data-i18n="cmd_name_melhor">!best / !melhor &lt;role&gt;</td><td data-i18n="cmd_melhor">Top 5 in the community by role (top · jungle · mid · adc · suporte)</td></tr>
     <tr><td>!ingame  /  !partida</td><td data-i18n="cmd_ingame">Shows who is currently in a game</td></tr>
     <tr><td>!players  /  !jogadores</td><td data-i18n="cmd_players">List all registered members</td></tr>
-    <tr><td>!resumo</td><td data-i18n="cmd_resumo">Generate the daily summary in this channel</td></tr>
+    <tr><td data-i18n="cmd_name_resumo">!summary / !resumo</td><td data-i18n="cmd_resumo">Generate the daily summary in this channel</td></tr>
     <tr><td>!language pt_BR / en_US</td><td data-i18n="cmd_language">Change the bot language for this server (admin)</td></tr>
     <tr><td>!ajuda  /  !help</td><td data-i18n="cmd_help">Shows this command list</td></tr>
   </table>
@@ -296,8 +296,10 @@
       cmd_th_cmd: "Command",
       cmd_th_desc: "Description",
       cmd_name_registrar: "!registrar &lt;Name#TAG&gt;",
-      cmd_name_elo: "!elo [player]",
+      cmd_name_eloflex: "!rank flex / !ranking flex",
+      cmd_name_elo: "!rank / !ranking [player]",
       cmd_name_kda: "!kda [player]",
+      cmd_name_resumo: "!summary / !resumo",
       cmd_name_maestria: "!mastery / !maestria [player]",
       cmd_name_analisar: "!analyze / !analisar [player]",
       cmd_name_comparar: "!compare / !comparar &lt;p1&gt; vs &lt;p2&gt;",
@@ -349,8 +351,10 @@
       cmd_th_cmd: "Comando",
       cmd_th_desc: "Descrição",
       cmd_name_registrar: "!registrar &lt;Nome#TAG&gt;",
-      cmd_name_elo: "!elo [jogador]",
+      cmd_name_eloflex: "!rank flex / !ranking flex",
+      cmd_name_elo: "!rank / !ranking [jogador]",
       cmd_name_kda: "!kda [jogador]",
+      cmd_name_resumo: "!summary / !resumo",
       cmd_name_maestria: "!maestria [jogador]",
       cmd_name_analisar: "!analisar [jogador]",
       cmd_name_comparar: "!comparar &lt;j1&gt; vs &lt;j2&gt;",
