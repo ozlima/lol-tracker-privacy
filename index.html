@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — LoL Tracker Community Bot</title>
+  <title>LoL Community Tracker — Discord Bot</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -11,119 +11,180 @@
       background: #0f1117;
       color: #c9d1d9;
       line-height: 1.7;
-      padding: 2rem 1rem;
     }
-    .container { max-width: 760px; margin: 0 auto; }
-    header { margin-bottom: 2.5rem; border-bottom: 1px solid #30363d; padding-bottom: 1.5rem; }
-    header h1 { font-size: 1.8rem; color: #e6edf3; margin-bottom: 0.4rem; }
-    header p  { font-size: 0.9rem; color: #8b949e; }
-    h2 { font-size: 1.15rem; color: #e6edf3; margin: 2rem 0 0.6rem; }
-    p, li { font-size: 0.95rem; color: #c9d1d9; }
-    ul { padding-left: 1.4rem; margin-top: 0.4rem; }
-    li { margin-bottom: 0.3rem; }
-    a { color: #58a6ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .badge {
-      display: inline-block; background: #1f6feb22; border: 1px solid #1f6feb;
-      color: #58a6ff; border-radius: 4px; padding: 0.15rem 0.5rem;
-      font-size: 0.8rem; margin-left: 0.5rem; vertical-align: middle;
+
+    /* ── Nav ── */
+    nav {
+      display: flex; align-items: center; gap: 1.5rem;
+      padding: 1rem 2rem; border-bottom: 1px solid #30363d;
+      font-size: 0.88rem;
     }
-    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #30363d;
-             font-size: 0.82rem; color: #8b949e; }
+    nav .brand { font-weight: 600; color: #e6edf3; font-size: 1rem; margin-right: auto; }
+    nav a { color: #8b949e; text-decoration: none; }
+    nav a:hover { color: #e6edf3; }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem 4rem;
+      background: radial-gradient(ellipse at 50% 0%, #1f3a5f44 0%, transparent 70%);
+    }
+    .hero .tag {
+      display: inline-block; background: #1f6feb22; border: 1px solid #1f6feb55;
+      color: #58a6ff; border-radius: 20px; padding: 0.25rem 0.9rem;
+      font-size: 0.8rem; margin-bottom: 1.2rem; letter-spacing: 0.03em;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); color: #e6edf3; font-weight: 700; margin-bottom: 1rem; }
+    .hero p  { font-size: 1.05rem; color: #8b949e; max-width: 560px; margin: 0 auto 2rem; }
+    .hero .cta {
+      display: inline-block; background: #1f6feb; color: #fff;
+      padding: 0.65rem 1.6rem; border-radius: 6px; font-size: 0.95rem;
+      text-decoration: none; font-weight: 500; transition: background 0.15s;
+    }
+    .hero .cta:hover { background: #388bfd; }
+
+    /* ── Features ── */
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem; max-width: 900px; margin: 3rem auto; padding: 0 1.5rem;
+    }
+    .card {
+      background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+      padding: 1.3rem 1.4rem;
+    }
+    .card .icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .card h3 { font-size: 0.95rem; color: #e6edf3; margin-bottom: 0.3rem; }
+    .card p  { font-size: 0.85rem; color: #8b949e; line-height: 1.5; }
+
+    /* ── Commands ── */
+    .section { max-width: 760px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+    .section h2 { font-size: 1.3rem; color: #e6edf3; margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { text-align: left; color: #8b949e; font-weight: 500;
+         border-bottom: 1px solid #30363d; padding: 0.4rem 0.6rem; }
+    td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #21262d; }
+    td:first-child { font-family: monospace; color: #79c0ff; white-space: nowrap; }
+    td:last-child  { color: #8b949e; }
+
+    /* ── Demo CTA ── */
+    .demo-cta {
+      text-align: center; max-width: 760px; margin: 0 auto 3rem; padding: 0 1.5rem;
+    }
+    .demo-cta h2 { font-size: 1.3rem; color: #e6edf3; margin-bottom: 0.6rem; }
+    .demo-cta p  { font-size: 0.95rem; color: #8b949e; margin-bottom: 1.4rem; }
+    .demo-cta .btn-discord {
+      display: inline-block; background: #5865f2; color: #fff;
+      padding: 0.7rem 1.8rem; border-radius: 6px; font-size: 0.95rem;
+      text-decoration: none; font-weight: 500; transition: background 0.15s;
+    }
+    .demo-cta .btn-discord:hover { background: #4752c4; }
+
+    /* ── Compliance ── */
+    .compliance {
+      background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+      max-width: 760px; margin: 0 auto 3rem; padding: 1.4rem 1.6rem;
+    }
+    .compliance h2 { font-size: 1rem; color: #e6edf3; margin-bottom: 0.6rem; }
+    .compliance p  { font-size: 0.88rem; color: #8b949e; }
+    .compliance a  { color: #58a6ff; text-decoration: none; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 2rem 1rem;
+      border-top: 1px solid #30363d; font-size: 0.8rem; color: #484f58;
+    }
+    footer a { color: #58a6ff; text-decoration: none; margin: 0 0.4rem; }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <header>
-    <h1>LoL Tracker Community Bot <span class="badge">Discord</span></h1>
-    <p>Privacy Policy &nbsp;·&nbsp; Last updated: May 2026 &nbsp;·&nbsp; v2.0</p>
-    <a href="https://discord.com/oauth2/authorize?client_id=696732271507537941&permissions=8&scope=bot"
-       target="_blank" rel="noopener"
-       style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:1rem;padding:0.55rem 1.1rem;
-              background:#5865f2;color:#fff;border-radius:6px;font-size:0.9rem;font-weight:600;
-              text-decoration:none;transition:background 0.15s;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
-        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.052a19.9 19.9 0 0 0 5.993 3.03.077.077 0 0 0 .084-.028 13.995 13.995 0 0 0 1.226-1.994.075.075 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
-      </svg>
-      Add to Discord
-    </a>
-  </header>
+<nav>
+  <span class="brand">⚔️ LoL Community Tracker</span>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+</nav>
 
-  <p>
-    LoL Tracker Community Bot ("the Bot") is an independent Discord bot that tracks ranked League
-    of Legends performance for members of a Discord server. It is not affiliated with, endorsed by,
-    or sponsored by Riot Games.
-  </p>
+<section class="hero">
+  <div class="tag">Discord Bot · League of Legends</div>
+  <h1>Track your ranked journey<br>with your community</h1>
+  <p>Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups — all inside your Discord server.</p>
+  <a href="privacy.html" class="cta">View Privacy Policy</a>
+</section>
 
-  <h2>1. Data We Collect</h2>
-  <p>The Bot collects and stores the following data when a user registers:</p>
-  <ul>
-    <li><strong>Riot account information</strong> — Summoner name, tag line, and PUUID, obtained via the official Riot Games API.</li>
-    <li><strong>Match history</strong> — Ranked match results (champion, KDA, CS, vision score, duration, queue type, timestamp) fetched from the Riot Games API for registered accounts only.</li>
-    <li><strong>Ranked data</strong> — Current tier, division, and LP, refreshed periodically via the Riot Games API.</li>
-    <li><strong>Discord user ID</strong> — Used solely to mention users in notifications and to link a Discord account to a Riot account.</li>
-  </ul>
-  <p>We do <strong>not</strong> collect passwords, email addresses, payment information, or any data outside the Riot Games API scope.</p>
-
-  <h2>2. How We Use the Data</h2>
-  <ul>
-    <li>Send ranked match result notifications to the server's notification channel.</li>
-    <li>Display leaderboards, statistics, and historical performance on request via bot commands.</li>
-    <li>Generate AI-assisted match analysis using Google Gemini — only anonymized match statistics (champion names, KDA, roles) are sent; no personally identifiable information is included in AI requests.</li>
-    <li>Detect and notify internal matchups between tracked players.</li>
-    <li>Store a per-server language preference (<code>pt_BR</code> or <code>en_US</code>) to localize bot responses. No personal language data is collected.</li>
-  </ul>
-
-  <h2>3. Data Storage</h2>
-  <p>
-    Data is stored in a private PostgreSQL database hosted on Supabase. Access is restricted to
-    the Bot's backend and the server administrator. Data is never sold, rented, or shared with
-    third parties beyond what is necessary for the Bot to function.
-  </p>
-
-  <h2>4. Third-Party Services</h2>
-  <ul>
-    <li><strong>Riot Games API</strong> — All League of Legends data is sourced exclusively from the official Riot Games API. Use is subject to <a href="https://developer.riotgames.com/policies/general" target="_blank">Riot's Developer Policies</a>.</li>
-    <li><strong>Discord</strong> — Notifications are delivered via the Discord API. Use is subject to <a href="https://discord.com/privacy" target="_blank">Discord's Privacy Policy</a>.</li>
-    <li><strong>Google Gemini</strong> — Used for optional AI-generated match commentary. Only non-identifiable match statistics are transmitted.</li>
-  </ul>
-
-  <h2>5. Data Retention</h2>
-  <p>
-    Data is retained for as long as the user remains registered in the Bot. Upon removal, the
-    user's record is deactivated. Users may request full deletion of their data at any time.
-  </p>
-
-  <h2>6. Your Rights</h2>
-  <p>Any registered user may:</p>
-  <ul>
-    <li><strong>View</strong> their tracked data using bot commands (<code>!elo</code>, <code>!kda</code>, etc.).</li>
-    <li><strong>Remove</strong> themselves from tracking by contacting a server administrator.</li>
-    <li><strong>Request deletion</strong> of all stored data by contacting the server administrator.</li>
-  </ul>
-
-  <h2>7. Current Usage Model</h2>
-  <p>
-    The Bot is currently provided free of charge to Discord server members. No data is sold
-    or monetized. This project complies with the applicable
-    <a href="https://developer.riotgames.com/policies/general" target="_blank">Riot Games Developer Policies</a>
-    for its current usage tier.
-  </p>
-
-  <h2>8. Contact</h2>
-  <p>
-    For any privacy-related requests or questions, please contact the server administrator via
-    Discord or open an issue on the
-    <a href="https://github.com/ozlima/lol-tracker-community-bot" target="_blank">project repository</a>.
-  </p>
-
-  <footer>
-    LoL Tracker Community Bot is not endorsed by Riot Games and does not reflect the views or
-    opinions of Riot Games or anyone officially involved in producing or managing League of Legends.
-    League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
-  </footer>
-
+<div class="features">
+  <div class="card">
+    <div class="icon">🔔</div>
+    <h3>Match Notifications</h3>
+    <p>Automatic results after every ranked game — champion, KDA, CS, LP change, and division promotions.</p>
+  </div>
+  <div class="card">
+    <div class="icon">🏆</div>
+    <h3>Live Leaderboard</h3>
+    <p>Real-time server ranking updated every few minutes. Notifies when players overtake each other.</p>
+  </div>
+  <div class="card">
+    <div class="icon">🤖</div>
+    <h3>AI Analysis</h3>
+    <p>Google Gemini-powered commentary on individual matches and head-to-head comparisons.</p>
+  </div>
+  <div class="card">
+    <div class="icon">⚔️</div>
+    <h3>Head-to-Head</h3>
+    <p>Detects when tracked players face each other in ranked and highlights the internal rivalry.</p>
+  </div>
+  <div class="card">
+    <div class="icon">📊</div>
+    <h3>Deep Stats</h3>
+    <p>Win rate by champion, KDA trends, best and worst picks, mastery levels, and season summaries.</p>
+  </div>
+  <div class="card">
+    <div class="icon">🎮</div>
+    <h3>Self-Registration</h3>
+    <p>Players register their own Riot account via a simple bot command. No admin panel required.</p>
+  </div>
 </div>
+
+<div class="section">
+  <h2>Commands</h2>
+  <table>
+    <tr><th>Command</th><th>Description</th></tr>
+    <tr><td>!registrar Name#TAG</td><td>Register your Riot account</td></tr>
+    <tr><td>!elos</td><td>Show server leaderboard</td></tr>
+    <tr><td>!elo [player]</td><td>Ranked info for a player</td></tr>
+    <tr><td>!kda [player]</td><td>KDA and champion stats</td></tr>
+    <tr><td>!analisar [player]</td><td>AI-assisted match analysis</td></tr>
+    <tr><td>!comparar X vs Y</td><td>Compare two players</td></tr>
+    <tr><td>!confronto X vs Y</td><td>Head-to-head history with AI commentary</td></tr>
+    <tr><td>!ingame [player]</td><td>Check if player is in a live game</td></tr>
+    <tr><td>!melhor</td><td>Best performers of the season</td></tr>
+    <tr><td>!resumo</td><td>Daily activity summary</td></tr>
+  </table>
+</div>
+
+<div class="demo-cta">
+  <h2>Try It Live</h2>
+  <p>Join the demo Discord server to test all bot features in real time. Register your Riot account with <code style="color:#79c0ff;">!registrar Name#TAG</code> and explore leaderboards, AI analysis, and match notifications.</p>
+  <a href="https://discord.gg/jSwaUVdguT" class="btn-discord" target="_blank">Join Demo Server</a>
+</div>
+
+<div class="compliance">
+  <h2>Riot Games Compliance</h2>
+  <p>
+    LoL Community Tracker uses only official, documented
+    <a href="https://developer.riotgames.com" target="_blank">Riot Games API</a> endpoints.
+    It does not create alternative ranking systems, does not charge for access, and does not use
+    Riot Games logos or branding. Not affiliated with or endorsed by Riot Games.<br><br>
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</div>
+
+<footer>
+  LoL Community Tracker is not endorsed by Riot Games.
+  League of Legends and Riot Games are trademarks of Riot Games, Inc.<br>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+</footer>
+
 </body>
 </html>

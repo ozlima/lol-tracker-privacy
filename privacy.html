@@ -28,6 +28,9 @@
       color: #58a6ff; border-radius: 4px; padding: 0.15rem 0.5rem;
       font-size: 0.8rem; margin-left: 0.5rem; vertical-align: middle;
     }
+    nav { margin-bottom: 2rem; font-size: 0.88rem; }
+    nav a { color: #8b949e; margin-right: 1rem; }
+    nav a:hover { color: #e6edf3; }
     footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #30363d;
              font-size: 0.82rem; color: #8b949e; }
   </style>
@@ -35,14 +38,14 @@
 <body>
 <div class="container">
 
+  <nav>
+    <a href="index.html">← Home</a>
+    <a href="terms.html">Terms of Service</a>
+  </nav>
+
   <header>
     <h1>LoL Tracker Community Bot <span class="badge">Discord</span></h1>
-    <p>Privacy Policy &nbsp;·&nbsp; Last updated: May 2026</p>
-    <nav style="margin-top:1rem;font-size:0.88rem;">
-      <a href="index.html" style="color:#58a6ff;margin-right:1rem;">Home</a>
-      <a href="privacy.html" style="color:#58a6ff;margin-right:1rem;">Privacy Policy</a>
-      <a href="terms.html" style="color:#58a6ff;">Terms of Service</a>
-    </nav>
+    <p>Privacy Policy &nbsp;·&nbsp; Last updated: May 2026 &nbsp;·&nbsp; v2.0</p>
   </header>
 
   <p>
@@ -67,6 +70,7 @@
     <li>Display leaderboards, statistics, and historical performance on request via bot commands.</li>
     <li>Generate AI-assisted match analysis using Google Gemini — only anonymized match statistics (champion names, KDA, roles) are sent; no personally identifiable information is included in AI requests.</li>
     <li>Detect and notify internal matchups between tracked players.</li>
+    <li>Store a per-server language preference (<code>pt_BR</code> or <code>en_US</code>) to localize bot responses. No personal language data is collected.</li>
   </ul>
 
   <h2>3. Data Storage</h2>
@@ -97,12 +101,12 @@
     <li><strong>Request deletion</strong> of all stored data by contacting the server administrator.</li>
   </ul>
 
-  <h2>7. No Commercial Use</h2>
+  <h2>7. Current Usage Model</h2>
   <p>
-    The Bot is provided free of charge. No data is monetized, and no premium features or
-    exclusive access tiers exist. This project complies with the Riot Games
-    <a href="https://developer.riotgames.com/policies/general" target="_blank">Developer Policies</a>
-    for non-commercial community projects.
+    The Bot is currently provided free of charge to Discord server members. No data is sold
+    or monetized. This project complies with the applicable
+    <a href="https://developer.riotgames.com/policies/general" target="_blank">Riot Games Developer Policies</a>
+    for its current usage tier.
   </p>
 
   <h2>8. Contact</h2>
