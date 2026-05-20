@@ -118,6 +118,10 @@
     }
     footer a { color: #58a6ff; text-decoration: none; margin: 0 0.4rem; }
 
+    /* ── Logos ── */
+    .nav-logo { width: 30px; height: 30px; object-fit: contain; border-radius: 50%; }
+    .hero-logo { width: 150px; height: 150px; object-fit: contain; border-radius: 50%; margin-bottom: 1.6rem; }
+
     /* ── Discord SVG icon ── */
     .ic-discord { width: 18px; height: 18px; flex-shrink: 0; }
     .ic-plus { width: 16px; height: 16px; flex-shrink: 0; }
@@ -126,13 +130,17 @@
 <body>
 
 <nav>
-  <span class="brand">⚔️ LoL Community Tracker</span>
+  <span class="brand">
+    <img id="navLogo" class="nav-logo lang-logo" src="logo-en.png" alt="LoL Tracker logo">
+    LoL Community Tracker
+  </span>
   <a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a>
   <a href="terms.html" data-i18n="nav_terms">Terms of Service</a>
   <button class="lang-toggle" onclick="toggleLang()" id="langBtn">🇧🇷 PT</button>
 </nav>
 
 <section class="hero">
+  <img id="heroLogo" class="hero-logo lang-logo" src="logo-en.png" alt="LoL Tracker bot logo">
   <div class="tag" data-i18n="hero_tag">Discord Bot · League of Legends</div>
   <h1 data-i18n="hero_h1">Track your ranked journey<br>with your community</h1>
   <p data-i18n="hero_p">Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups — all inside your Discord server.</p>
@@ -346,6 +354,8 @@
     });
     document.getElementById("langBtn").textContent = lang === "en" ? "🇧🇷 PT" : "🇺🇸 EN";
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+    const logoSrc = lang === "en" ? "logo-en.png" : "logo-pt.png";
+    document.querySelectorAll(".lang-logo").forEach(img => { img.src = logoSrc; });
   }
 
   function toggleLang() {
