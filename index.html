@@ -164,7 +164,7 @@
   <h1 data-i18n="hero_h1">Track your ranked journey<br>with your community</h1>
   <p data-i18n="hero_p">Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups — all inside your Discord server.</p>
   <div class="hero-btns">
-    <a href="https://discord.com/oauth2/authorize?client_id=696732271507537941&permissions=8&scope=bot"
+    <a href="https://discord.com/oauth2/authorize?client_id=696732271507537941&permissions=347136&scope=bot"
        target="_blank" rel="noopener" class="cta-add">
       <svg class="ic-plus" viewBox="0 0 16 16" fill="currentColor">
         <path d="M8 1a.75.75 0 0 1 .75.75V7h5.25a.75.75 0 0 1 0 1.5H8.75v5.25a.75.75 0 0 1-1.5 0V8.5H2a.75.75 0 0 1 0-1.5h5.25V1.75A.75.75 0 0 1 8 1z"/>
@@ -226,6 +226,8 @@
     <tr><td>!ingame  /  !partida</td><td data-i18n="cmd_ingame">Shows who is currently in a game</td></tr>
     <tr><td>!players  /  !jogadores</td><td data-i18n="cmd_players">List all registered members</td></tr>
     <tr><td data-i18n="cmd_name_resumo">!summary / !resumo</td><td data-i18n="cmd_resumo">Generate the daily summary in this channel</td></tr>
+    <tr><td data-i18n="cmd_name_top">!top piores / !top melhor</td><td data-i18n="cmd_top">Community KDA ranking — worst or best players in recent games</td></tr>
+    <tr><td data-i18n="cmd_name_update">!update</td><td data-i18n="cmd_update">Sync and verify player nicknames for this server (admin)</td></tr>
     <tr><td>!language pt_BR / en_US</td><td data-i18n="cmd_language">Change the bot language for this server (admin)</td></tr>
     <tr><td>!ajuda  /  !help</td><td data-i18n="cmd_help">Shows this command list</td></tr>
   </table>
@@ -241,7 +243,7 @@
       </svg>
       <span data-i18n="btn_demo">Join Demo Server</span>
     </a>
-    <a href="https://discord.com/oauth2/authorize?client_id=696732271507537941&permissions=8&scope=bot"
+    <a href="https://discord.com/oauth2/authorize?client_id=696732271507537941&permissions=347136&scope=bot"
        target="_blank" rel="noopener" class="btn-add">
       <svg class="ic-plus" viewBox="0 0 16 16" fill="currentColor">
         <path d="M8 1a.75.75 0 0 1 .75.75V7h5.25a.75.75 0 0 1 0 1.5H8.75v5.25a.75.75 0 0 1-1.5 0V8.5H2a.75.75 0 0 1 0-1.5h5.25V1.75A.75.75 0 0 1 8 1z"/>
@@ -318,6 +320,10 @@
       cmd_ingame: "Shows who is currently in a game",
       cmd_players: "List all registered members",
       cmd_resumo: "Generate the daily summary in this channel",
+      cmd_name_top: "!top piores / !top melhor",
+      cmd_top: "Community KDA ranking — worst or best players in recent games",
+      cmd_name_update: "!update",
+      cmd_update: "Sync and verify player nicknames for this server (admin)",
       cmd_language: "Change the bot language for this server (admin)",
       cmd_help: "Shows this command list",
       demo_title: "Try It Live",
@@ -373,6 +379,10 @@
       cmd_ingame: "Mostra quem está em partida agora",
       cmd_players: "Lista todos os membros registrados",
       cmd_resumo: "Gera o resumo do dia neste canal",
+      cmd_name_top: "!top piores / !top melhor",
+      cmd_top: "Ranking de KDA da comunidade — piores ou melhores jogadores nas partidas recentes",
+      cmd_name_update: "!update",
+      cmd_update: "Sincroniza e verifica os nicks dos jogadores neste servidor (admin)",
       cmd_language: "Altera o idioma do bot para este servidor (admin)",
       cmd_help: "Mostra esta lista de comandos",
       demo_title: "Experimente ao Vivo",
