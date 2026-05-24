@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LoL Community Tracker â€” Discord Bot</title>
-  <meta property="og:title" content="LoL Community Tracker â€” Discord Bot" />
-  <meta property="og:description" content="Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups â€” all inside your Discord server." />
+  <title>LoL Community Tracker &ndash; Discord Bot</title>
+  <meta property="og:title" content="LoL Community Tracker &ndash; Discord Bot" />
+  <meta property="og:description" content="Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups &ndash; all inside your Discord server." />
   <meta property="og:image" content="https://ozlima.github.io/lol-tracker/banner-en.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -19,7 +19,7 @@
       line-height: 1.7;
     }
 
-    /* â”€â”€ Nav â”€â”€ */
+    /* Nav */
     nav {
       display: flex; align-items: center; gap: 1.5rem;
       padding: 1rem 2rem;
@@ -45,7 +45,7 @@
     }
     .lang-toggle:hover { border-color: #58a6ff; color: #58a6ff; }
 
-    /* â”€â”€ Hero â”€â”€ */
+    /* Hero */
     .hero {
       text-align: center;
       padding: 5rem 1rem 4rem;
@@ -73,7 +73,7 @@
     }
     .hero .cta-add:hover { background: #4752c4; }
 
-    /* â”€â”€ Features â”€â”€ */
+    /* Features */
     .features {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.2rem; max-width: 900px; margin: 3rem auto; padding: 0 1.5rem;
@@ -86,17 +86,62 @@
     .card h3 { font-size: 0.95rem; color: #e6edf3; margin-bottom: 0.3rem; }
     .card p  { font-size: 0.85rem; color: #8b949e; line-height: 1.5; }
 
-    /* â”€â”€ Commands â”€â”€ */
-    .section { max-width: 760px; margin: 0 auto 3rem; padding: 0 1.5rem; }
-    .section h2 { font-size: 1.3rem; color: #e6edf3; margin-bottom: 1rem; }
+    /* Section */
+    .section { max-width: 860px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+    .section h2 { font-size: 1.3rem; color: #e6edf3; margin-bottom: 0.4rem; }
+    .section-sub { font-size: 0.9rem; color: #8b949e; margin-bottom: 1.4rem; }
+
+    /* Notifications gallery */
+    .notif-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1rem;
+    }
+    .notif-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 0;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .notif-card:hover {
+      border-color: #58a6ff44;
+      box-shadow: 0 4px 20px #00000044;
+    }
+    .notif-card img {
+      width: 100%;
+      display: block;
+    }
+    .notif-card figcaption {
+      padding: 0.55rem 0.9rem;
+      font-size: 0.79rem;
+      color: #8b949e;
+      text-align: center;
+      border-top: 1px solid #21262d;
+    }
+
+    /* Commands */
     table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
     th { text-align: left; color: #8b949e; font-weight: 500;
          border-bottom: 1px solid #30363d; padding: 0.4rem 0.6rem; }
     td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #21262d; }
     td:first-child { font-family: monospace; color: #79c0ff; white-space: nowrap; }
     td:last-child  { color: #8b949e; }
+    .cmd-cat td {
+      background: #161b22;
+      color: #e6edf3;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.55rem 0.6rem 0.45rem;
+      border-bottom: 1px solid #30363d;
+      border-top: 1px solid #30363d;
+    }
+    .cmd-cat:first-of-type td { border-top: none; }
 
-    /* â”€â”€ Demo CTA â”€â”€ */
+    /* Demo CTA */
     .demo-cta {
       text-align: center; max-width: 760px; margin: 0 auto 3rem; padding: 0 1.5rem;
     }
@@ -118,7 +163,7 @@
     }
     .btn-add:hover { background: #2ea043; }
 
-    /* â”€â”€ Compliance â”€â”€ */
+    /* Compliance */
     .compliance {
       background: #161b22; border: 1px solid #30363d; border-radius: 8px;
       max-width: 760px; margin: 0 auto 3rem; padding: 1.4rem 1.6rem;
@@ -127,14 +172,14 @@
     .compliance p  { font-size: 0.88rem; color: #8b949e; }
     .compliance a  { color: #58a6ff; text-decoration: none; }
 
-    /* â”€â”€ Footer â”€â”€ */
+    /* Footer */
     footer {
       text-align: center; padding: 2rem 1rem;
       border-top: 1px solid #30363d; font-size: 0.8rem; color: #484f58;
     }
     footer a { color: #58a6ff; text-decoration: none; margin: 0 0.4rem; }
 
-    /* â”€â”€ Logos â”€â”€ */
+    /* Logos */
     .nav-logo { width: 32px; height: 32px; object-fit: contain; }
     .hero-banner {
       display: block; max-width: 860px; width: 100%; margin: 2.5rem auto 0;
@@ -142,7 +187,7 @@
       box-shadow: 0 8px 32px #0008;
     }
 
-    /* â”€â”€ Discord SVG icon â”€â”€ */
+    /* Icons */
     .ic-discord { width: 18px; height: 18px; flex-shrink: 0; }
     .ic-plus { width: 16px; height: 16px; flex-shrink: 0; }
   </style>
@@ -156,13 +201,13 @@
   </span>
   <a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a>
   <a href="terms.html" data-i18n="nav_terms">Terms of Service</a>
-  <button class="lang-toggle" onclick="toggleLang()" id="langBtn">ðŸ‡§ðŸ‡· PT</button>
+  <button class="lang-toggle" onclick="toggleLang()" id="langBtn">&#127463;&#127479; PT</button>
 </nav>
 
 <section class="hero">
-  <div class="tag" data-i18n="hero_tag">Discord Bot Â· League of Legends</div>
+  <div class="tag" data-i18n="hero_tag">Discord Bot &middot; League of Legends</div>
   <h1 data-i18n="hero_h1">Track your ranked journey<br>with your community</h1>
-  <p data-i18n="hero_p">Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups â€” all inside your Discord server.</p>
+  <p data-i18n="hero_p">Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups &ndash; all inside your Discord server.</p>
   <div class="hero-btns">
     <a href="https://discord.com/oauth2/authorize?client_id=696732271507537941&permissions=2814888280149056&scope=bot"
        target="_blank" rel="noopener" class="cta-add">
@@ -178,58 +223,100 @@
 
 <div class="features">
   <div class="card">
-    <div class="icon">ðŸ””</div>
+    <div class="icon">&#128276;</div>
     <h3 data-i18n="feat1_title">Match Notifications</h3>
-    <p data-i18n="feat1_desc">Automatic results after every ranked game â€” champion, KDA, CS, LP change, and division promotions.</p>
+    <p data-i18n="feat1_desc">Automatic results after every ranked game &ndash; champion, KDA, CS, LP change, and division promotions.</p>
   </div>
   <div class="card">
-    <div class="icon">ðŸ†</div>
+    <div class="icon">&#127942;</div>
     <h3 data-i18n="feat2_title">Live Leaderboard</h3>
     <p data-i18n="feat2_desc">Real-time server ranking updated every few minutes. Notifies when players overtake each other.</p>
   </div>
   <div class="card">
-    <div class="icon">ðŸ¤–</div>
+    <div class="icon">&#129302;</div>
     <h3 data-i18n="feat3_title">AI Analysis</h3>
     <p data-i18n="feat3_desc">Google Gemini-powered commentary on individual matches and head-to-head comparisons.</p>
   </div>
   <div class="card">
-    <div class="icon">âš”ï¸</div>
+    <div class="icon">&#9876;&#65039;</div>
     <h3 data-i18n="feat4_title">Head-to-Head</h3>
     <p data-i18n="feat4_desc">Detects when tracked players face each other in ranked and highlights the internal rivalry.</p>
   </div>
   <div class="card">
-    <div class="icon">ðŸ“Š</div>
+    <div class="icon">&#128202;</div>
     <h3 data-i18n="feat5_title">Deep Stats</h3>
     <p data-i18n="feat5_desc">Win rate by champion, KDA trends, best and worst picks, mastery levels, and season summaries.</p>
   </div>
   <div class="card">
-    <div class="icon">ðŸŽ®</div>
+    <div class="icon">&#127918;</div>
     <h3 data-i18n="feat6_title">Self-Registration</h3>
     <p data-i18n="feat6_desc">Players register their own Riot account via a simple bot command. No admin panel required.</p>
   </div>
 </div>
 
+<!-- Notifications section -->
+<div class="section" id="notifications">
+  <h2 data-i18n="notif_title">See It in Action</h2>
+  <p class="section-sub" data-i18n="notif_sub">Real notifications from active community servers</p>
+  <div class="notif-grid">
+    <figure class="notif-card">
+      <img src="ss/notif-win.png" alt="Victory notification" loading="lazy">
+      <figcaption data-i18n="notif_cap1">Win &middot; LP gain &middot; rank climb &middot; overtake alert</figcaption>
+    </figure>
+    <figure class="notif-card">
+      <img src="ss/notif-loss.png" alt="Defeat notification" loading="lazy">
+      <figcaption data-i18n="notif_cap2">Loss &middot; LP drop tracking</figcaption>
+    </figure>
+    <figure class="notif-card">
+      <img src="ss/notif-record.png" alt="Personal record notification" loading="lazy">
+      <figcaption data-i18n="notif_cap3">Personalized messages with stats &amp; humor</figcaption>
+    </figure>
+    <figure class="notif-card">
+      <img src="ss/notif-kda.png" alt="Community KDA ranking" loading="lazy">
+      <figcaption data-i18n="notif_cap4">Community KDA leaderboard &ndash; automatic alerts</figcaption>
+    </figure>
+    <figure class="notif-card">
+      <img src="ss/notif-summary.png" alt="Daily summary" loading="lazy">
+      <figcaption data-i18n="notif_cap5">AI-powered daily community recap</figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- Commands section -->
 <div class="section">
   <h2 data-i18n="cmd_title">Commands</h2>
   <table>
     <tr><th data-i18n="cmd_th_cmd">Command</th><th data-i18n="cmd_th_desc">Description</th></tr>
-    <tr><td data-i18n="cmd_name_registrar">!registrar &lt;Name#TAG&gt;</td><td data-i18n="cmd_registrar">Register your LoL account â€” e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code></td></tr>
-    <tr><td>!elos  /  !elosdacomunidade</td><td data-i18n="cmd_elos">Solo/Duo ranking of all members</td></tr>
+
+    <tr class="cmd-cat"><td colspan="2" data-i18n="cat_account">&#128100; Account</td></tr>
+    <tr><td data-i18n="cmd_name_registrar">!registrar &lt;Name#TAG&gt;</td><td data-i18n="cmd_registrar">Register your LoL account &ndash; e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code></td></tr>
+    <tr><td data-i18n="cmd_name_addplayer">!addplayer &lt;Name#TAG&gt;</td><td data-i18n="cmd_addplayer">Add a player to the tracker (admin)</td></tr>
+    <tr><td data-i18n="cmd_name_removeplayer">!removeplayer &lt;Name#TAG&gt;</td><td data-i18n="cmd_removeplayer">Remove a player from the tracker (admin)</td></tr>
+    <tr><td>!players &nbsp;/ &nbsp;!jogadores</td><td data-i18n="cmd_players">List all registered members</td></tr>
+
+    <tr class="cmd-cat"><td colspan="2" data-i18n="cat_ranking">&#127942; Ranking</td></tr>
+    <tr><td>!elos &nbsp;/ &nbsp;!elosdacomunidade</td><td data-i18n="cmd_elos">Solo/Duo ranking of all members</td></tr>
     <tr><td data-i18n="cmd_name_eloflex">!rank flex / !ranking flex</td><td data-i18n="cmd_eloflex">Flex ranking of all members</td></tr>
     <tr><td data-i18n="cmd_name_elo">!rank / !ranking [player]</td><td data-i18n="cmd_elo">Detailed elo of a player (omit name to see yours)</td></tr>
+    <tr><td data-i18n="cmd_name_top">!top piores / !top melhor</td><td data-i18n="cmd_top">Community KDA ranking &ndash; worst or best players in recent games</td></tr>
+
+    <tr class="cmd-cat"><td colspan="2" data-i18n="cat_stats">&#128202; Stats</td></tr>
     <tr><td data-i18n="cmd_name_kda">!kda [player]</td><td data-i18n="cmd_kda">KDA from last 20 ranked games</td></tr>
     <tr><td data-i18n="cmd_name_maestria">!mastery / !maestria [player]</td><td data-i18n="cmd_maestria">Top 7 champion masteries</td></tr>
-    <tr><td data-i18n="cmd_name_analisar">!analyze / !analisar [player]</td><td data-i18n="cmd_analisar">AI profile analysis â€” strengths, weaknesses and tips</td></tr>
+    <tr><td data-i18n="cmd_name_melhor">!best / !melhor &lt;role&gt;</td><td data-i18n="cmd_melhor">Top 5 in the community by role (top &middot; jungle &middot; mid &middot; adc &middot; support)</td></tr>
+    <tr><td>!ingame &nbsp;/ &nbsp;!partida</td><td data-i18n="cmd_ingame">Shows who is currently in a game</td></tr>
+
+    <tr class="cmd-cat"><td colspan="2" data-i18n="cat_ai">&#129302; AI &amp; Analysis</td></tr>
+    <tr><td data-i18n="cmd_name_analisar">!analyze / !analisar [player]</td><td data-i18n="cmd_analisar">AI profile analysis &ndash; strengths, weaknesses and tips</td></tr>
     <tr><td data-i18n="cmd_name_comparar">!compare / !comparar &lt;p1&gt; vs &lt;p2&gt;</td><td data-i18n="cmd_comparar">1v1 comparison between two players with AI</td></tr>
     <tr><td data-i18n="cmd_name_confronto">!h2h / !confronto &lt;p1&gt; vs &lt;p2&gt;</td><td data-i18n="cmd_confronto">Head-to-head history with AI commentary</td></tr>
-    <tr><td data-i18n="cmd_name_melhor">!best / !melhor &lt;role&gt;</td><td data-i18n="cmd_melhor">Top 5 in the community by role (top Â· jungle Â· mid Â· adc Â· suporte)</td></tr>
-    <tr><td>!ingame  /  !partida</td><td data-i18n="cmd_ingame">Shows who is currently in a game</td></tr>
-    <tr><td>!players  /  !jogadores</td><td data-i18n="cmd_players">List all registered members</td></tr>
-    <tr><td data-i18n="cmd_name_resumo">!summary / !resumo</td><td data-i18n="cmd_resumo">Generate the daily summary in this channel</td></tr>
-    <tr><td data-i18n="cmd_name_top">!top piores / !top melhor</td><td data-i18n="cmd_top">Community KDA ranking â€” worst or best players in recent games</td></tr>
+    <tr><td data-i18n="cmd_name_resumo">!summary / !resumo</td><td data-i18n="cmd_resumo">Generate the daily community summary</td></tr>
+
+    <tr class="cmd-cat"><td colspan="2" data-i18n="cat_admin">&#9881;&#65039; Server Admin</td></tr>
+    <tr><td data-i18n="cmd_name_setup">!setup #channel</td><td data-i18n="cmd_setup">Set the notification channel for this server (admin)</td></tr>
     <tr><td data-i18n="cmd_name_update">!update</td><td data-i18n="cmd_update">Sync and verify player nicknames for this server (admin)</td></tr>
     <tr><td>!language pt_BR / en_US</td><td data-i18n="cmd_language">Change the bot language for this server (admin)</td></tr>
-    <tr><td>!ajuda  /  !help</td><td data-i18n="cmd_help">Shows this command list</td></tr>
+    <tr><td>!ajuda &nbsp;/ &nbsp;!help</td><td data-i18n="cmd_help">Shows this command list</td></tr>
   </table>
 </div>
 
@@ -260,7 +347,7 @@
     <a href="https://developer.riotgames.com" target="_blank">Riot Games API</a> endpoints.
     It does not create alternative ranking systems, does not charge for access, and does not use
     Riot Games logos or branding. Not affiliated with or endorsed by Riot Games.<br><br>
-    <a href="privacy.html">Privacy Policy</a> Â·
+    <a href="privacy.html">Privacy Policy</a> &middot;
     <a href="terms.html">Terms of Service</a>
   </p>
 </div>
@@ -277,13 +364,13 @@
     en: {
       nav_privacy: "Privacy Policy",
       nav_terms: "Terms of Service",
-      hero_tag: "Discord Bot Â· League of Legends",
+      hero_tag: "Discord Bot &middot; League of Legends",
       hero_h1: "Track your ranked journey<br>with your community",
-      hero_p: "Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups â€” all inside your Discord server.",
+      hero_p: "Automatic match notifications, leaderboards, AI-assisted analysis, and head-to-head matchups &ndash; all inside your Discord server.",
       btn_add_server: "Add to your server",
       btn_privacy: "View Privacy Policy",
       feat1_title: "Match Notifications",
-      feat1_desc: "Automatic results after every ranked game â€” champion, KDA, CS, LP change, and division promotions.",
+      feat1_desc: "Automatic results after every ranked game &ndash; champion, KDA, CS, LP change, and division promotions.",
       feat2_title: "Live Leaderboard",
       feat2_desc: "Real-time server ranking updated every few minutes. Notifies when players overtake each other.",
       feat3_title: "AI Analysis",
@@ -294,10 +381,24 @@
       feat5_desc: "Win rate by champion, KDA trends, best and worst picks, mastery levels, and season summaries.",
       feat6_title: "Self-Registration",
       feat6_desc: "Players register their own Riot account via a simple bot command. No admin panel required.",
+      notif_title: "See It in Action",
+      notif_sub: "Real notifications from active community servers",
+      notif_cap1: "Win &middot; LP gain &middot; rank climb &middot; overtake alert",
+      notif_cap2: "Loss &middot; LP drop tracking",
+      notif_cap3: "Personalized messages with stats &amp; humor",
+      notif_cap4: "Community KDA leaderboard &ndash; automatic alerts",
+      notif_cap5: "AI-powered daily community recap",
       cmd_title: "Commands",
       cmd_th_cmd: "Command",
       cmd_th_desc: "Description",
+      cat_account: "&#128100; Account",
+      cat_ranking: "&#127942; Ranking",
+      cat_stats: "&#128202; Stats",
+      cat_ai: "&#129302; AI &amp; Analysis",
+      cat_admin: "&#9881;&#65039; Server Admin",
       cmd_name_registrar: "!registrar &lt;Name#TAG&gt;",
+      cmd_name_addplayer: "!addplayer &lt;Name#TAG&gt;",
+      cmd_name_removeplayer: "!removeplayer &lt;Name#TAG&gt;",
       cmd_name_eloflex: "!rank flex / !ranking flex",
       cmd_name_elo: "!rank / !ranking [player]",
       cmd_name_kda: "!kda [player]",
@@ -307,22 +408,26 @@
       cmd_name_comparar: "!compare / !comparar &lt;p1&gt; vs &lt;p2&gt;",
       cmd_name_confronto: "!h2h / !confronto &lt;p1&gt; vs &lt;p2&gt;",
       cmd_name_melhor: "!best / !melhor &lt;role&gt;",
-      cmd_registrar: 'Register your LoL account â€” e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code>',
+      cmd_name_top: "!top piores / !top melhor",
+      cmd_name_update: "!update",
+      cmd_name_setup: "!setup #channel",
+      cmd_registrar: 'Register your LoL account &ndash; e.g. <code style="color:#79c0ff">!registrar IDV Koala#BR1</code>',
+      cmd_addplayer: "Add a player to the tracker (admin)",
+      cmd_removeplayer: "Remove a player from the tracker (admin)",
       cmd_elos: "Solo/Duo ranking of all members",
       cmd_eloflex: "Flex ranking of all members",
       cmd_elo: "Detailed elo of a player (omit name to see yours)",
       cmd_kda: "KDA from last 20 ranked games",
       cmd_maestria: "Top 7 champion masteries",
-      cmd_analisar: "AI profile analysis â€” strengths, weaknesses and tips",
+      cmd_analisar: "AI profile analysis &ndash; strengths, weaknesses and tips",
       cmd_comparar: "1v1 comparison between two players with AI",
       cmd_confronto: "Head-to-head history with AI commentary",
-      cmd_melhor: "Top 5 in the community by role (top Â· jungle Â· mid Â· adc Â· suporte)",
+      cmd_melhor: "Top 5 in the community by role (top &middot; jungle &middot; mid &middot; adc &middot; support)",
       cmd_ingame: "Shows who is currently in a game",
       cmd_players: "List all registered members",
-      cmd_resumo: "Generate the daily summary in this channel",
-      cmd_name_top: "!top piores / !top melhor",
-      cmd_top: "Community KDA ranking â€” worst or best players in recent games",
-      cmd_name_update: "!update",
+      cmd_resumo: "Generate the daily community summary",
+      cmd_top: "Community KDA ranking &ndash; worst or best players in recent games",
+      cmd_setup: "Set the notification channel for this server (admin)",
       cmd_update: "Sync and verify player nicknames for this server (admin)",
       cmd_language: "Change the bot language for this server (admin)",
       cmd_help: "Shows this command list",
@@ -330,33 +435,47 @@
       demo_p: 'Join the demo Discord server to test all bot features in real time. Register your Riot account with <code style="color:#79c0ff;">!registrar Name#TAG</code> and explore leaderboards, AI analysis, and match notifications.',
       btn_demo: "Join Demo Server",
       compliance_title: "Riot Games Compliance",
-      compliance_p: 'LoL Community Tracker uses only official, documented <a href="https://developer.riotgames.com" target="_blank">Riot Games API</a> endpoints. It does not create alternative ranking systems, does not charge for access, and does not use Riot Games logos or branding. Not affiliated with or endorsed by Riot Games.<br><br><a href="privacy.html">Privacy Policy</a> Â· <a href="terms.html">Terms of Service</a>',
+      compliance_p: 'LoL Community Tracker uses only official, documented <a href="https://developer.riotgames.com" target="_blank">Riot Games API</a> endpoints. It does not create alternative ranking systems, does not charge for access, and does not use Riot Games logos or branding. Not affiliated with or endorsed by Riot Games.<br><br><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a>',
       footer_text: "LoL Community Tracker is not endorsed by Riot Games. League of Legends and Riot Games are trademarks of Riot Games, Inc.",
     },
     pt: {
-      nav_privacy: "PolÃ­tica de Privacidade",
-      nav_terms: "Termos de ServiÃ§o",
-      hero_tag: "Bot para Discord Â· League of Legends",
+      nav_privacy: "Pol&iacute;tica de Privacidade",
+      nav_terms: "Termos de Servi&ccedil;o",
+      hero_tag: "Bot para Discord &middot; League of Legends",
       hero_h1: "Acompanhe sua jornada ranqueada<br>com sua comunidade",
-      hero_p: "NotificaÃ§Ãµes automÃ¡ticas de partidas, ranking do servidor, anÃ¡lise com IA e confrontos diretos â€” tudo dentro do seu servidor no Discord.",
+      hero_p: "Notifica&ccedil;&otilde;es autom&aacute;ticas de partidas, ranking do servidor, an&aacute;lise com IA e confrontos diretos &ndash; tudo dentro do seu servidor no Discord.",
       btn_add_server: "Adicionar ao seu servidor",
-      btn_privacy: "Ver PolÃ­tica de Privacidade",
-      feat1_title: "NotificaÃ§Ãµes de Partidas",
-      feat1_desc: "Resultados automÃ¡ticos apÃ³s cada partida ranqueada â€” campeÃ£o, KDA, CS, variaÃ§Ã£o de LP e promoÃ§Ãµes.",
+      btn_privacy: "Ver Pol&iacute;tica de Privacidade",
+      feat1_title: "Notifica&ccedil;&otilde;es de Partidas",
+      feat1_desc: "Resultados autom&aacute;ticos ap&oacute;s cada partida ranqueada &ndash; campe&atilde;o, KDA, CS, varia&ccedil;&atilde;o de LP e promo&ccedil;&otilde;es.",
       feat2_title: "Ranking em Tempo Real",
-      feat2_desc: "ClassificaÃ§Ã£o do servidor atualizada a cada poucos minutos. Avisa quando um jogador ultrapassa outro.",
-      feat3_title: "AnÃ¡lise com IA",
-      feat3_desc: "ComentÃ¡rios gerados pelo Google Gemini sobre partidas individuais e confrontos entre jogadores.",
+      feat2_desc: "Classifica&ccedil;&atilde;o do servidor atualizada a cada poucos minutos. Avisa quando um jogador ultrapassa outro.",
+      feat3_title: "An&aacute;lise com IA",
+      feat3_desc: "Coment&aacute;rios gerados pelo Google Gemini sobre partidas individuais e confrontos entre jogadores.",
       feat4_title: "Confronto Direto",
       feat4_desc: "Detecta quando jogadores monitorados se enfrentam no ranqueado e destaca a rivalidade interna.",
-      feat5_title: "EstatÃ­sticas Detalhadas",
-      feat5_desc: "Taxa de vitÃ³ria por campeÃ£o, tendÃªncias de KDA, melhores e piores picks e resumos da temporada.",
+      feat5_title: "Estat&iacute;sticas Detalhadas",
+      feat5_desc: "Taxa de vit&oacute;ria por campe&atilde;o, tend&ecirc;ncias de KDA, melhores e piores picks e resumos da temporada.",
       feat6_title: "Auto-Cadastro",
-      feat6_desc: "Jogadores registram sua prÃ³pria conta Riot com um comando simples. Sem painel administrativo.",
+      feat6_desc: "Jogadores registram sua pr&oacute;pria conta Riot com um comando simples. Sem painel administrativo.",
+      notif_title: "Veja em A&ccedil;&atilde;o",
+      notif_sub: "Notifica&ccedil;&otilde;es reais de servidores ativos",
+      notif_cap1: "Vit&oacute;ria &middot; ganho de LP &middot; subida de elo &middot; alerta de ultrapassagem",
+      notif_cap2: "Derrota &middot; queda de LP",
+      notif_cap3: "Mensagens personalizadas com estat&iacute;sticas e humor",
+      notif_cap4: "Ranking de KDA da comunidade &ndash; alertas autom&aacute;ticos",
+      notif_cap5: "Resumo di&aacute;rio da comunidade com IA",
       cmd_title: "Comandos",
       cmd_th_cmd: "Comando",
-      cmd_th_desc: "DescriÃ§Ã£o",
+      cmd_th_desc: "Descri&ccedil;&atilde;o",
+      cat_account: "&#128100; Conta",
+      cat_ranking: "&#127942; Ranking",
+      cat_stats: "&#128202; Estat&iacute;sticas",
+      cat_ai: "&#129302; IA &amp; An&aacute;lise",
+      cat_admin: "&#9881;&#65039; Administra&ccedil;&atilde;o",
       cmd_name_registrar: "!registrar &lt;Nome#TAG&gt;",
+      cmd_name_addplayer: "!addplayer &lt;Nome#TAG&gt;",
+      cmd_name_removeplayer: "!removeplayer &lt;Nome#TAG&gt;",
       cmd_name_eloflex: "!rank flex / !ranking flex",
       cmd_name_elo: "!rank / !ranking [jogador]",
       cmd_name_kda: "!kda [jogador]",
@@ -365,32 +484,36 @@
       cmd_name_analisar: "!analisar [jogador]",
       cmd_name_comparar: "!comparar &lt;j1&gt; vs &lt;j2&gt;",
       cmd_name_confronto: "!confronto &lt;j1&gt; vs &lt;j2&gt;",
-      cmd_name_melhor: "!melhor &lt;posiÃ§Ã£o&gt;",
-      cmd_registrar: 'Registra sua conta do LoL â€” ex: <code style="color:#79c0ff">!registrar IDV Koala#BR1</code>',
+      cmd_name_melhor: "!melhor &lt;posi&ccedil;&atilde;o&gt;",
+      cmd_name_top: "!top piores / !top melhor",
+      cmd_name_update: "!update",
+      cmd_name_setup: "!setup #canal",
+      cmd_registrar: 'Registra sua conta do LoL &ndash; ex: <code style="color:#79c0ff">!registrar IDV Koala#BR1</code>',
+      cmd_addplayer: "Adiciona um jogador ao tracker (admin)",
+      cmd_removeplayer: "Remove um jogador do tracker (admin)",
       cmd_elos: "Ranking Solo/Duo de todos os membros",
       cmd_eloflex: "Ranking Flex de todos os membros",
       cmd_elo: "Elo detalhado de um jogador (sem nome: mostra o seu)",
-      cmd_kda: "KDA das Ãºltimas 20 partidas ranked",
-      cmd_maestria: "Top 7 maestrias de campeÃ£o",
-      cmd_analisar: "AnÃ¡lise de perfil com IA â€” pontos fortes, fracos e dicas",
-      cmd_comparar: "ComparaÃ§Ã£o 1v1 entre dois jogadores com IA",
-      cmd_confronto: "HistÃ³rico de confrontos com comentÃ¡rio de IA",
-      cmd_melhor: "Top 5 da comunidade por posiÃ§Ã£o (top Â· jungle Â· mid Â· adc Â· suporte)",
-      cmd_ingame: "Mostra quem estÃ¡ em partida agora",
+      cmd_kda: "KDA das &uacute;ltimas 20 partidas ranked",
+      cmd_maestria: "Top 7 maestrias de campe&atilde;o",
+      cmd_analisar: "An&aacute;lise de perfil com IA &ndash; pontos fortes, fracos e dicas",
+      cmd_comparar: "Compara&ccedil;&atilde;o 1v1 entre dois jogadores com IA",
+      cmd_confronto: "Hist&oacute;rico de confrontos com coment&aacute;rio de IA",
+      cmd_melhor: "Top 5 da comunidade por posi&ccedil;&atilde;o (top &middot; jungle &middot; mid &middot; adc &middot; suporte)",
+      cmd_ingame: "Mostra quem est&aacute; em partida agora",
       cmd_players: "Lista todos os membros registrados",
-      cmd_resumo: "Gera o resumo do dia neste canal",
-      cmd_name_top: "!top piores / !top melhor",
-      cmd_top: "Ranking de KDA da comunidade â€” piores ou melhores jogadores nas partidas recentes",
-      cmd_name_update: "!update",
+      cmd_resumo: "Gera o resumo do dia da comunidade",
+      cmd_top: "Ranking de KDA da comunidade &ndash; piores ou melhores jogadores nas partidas recentes",
+      cmd_setup: "Define o canal de notifica&ccedil;&otilde;es deste servidor (admin)",
       cmd_update: "Sincroniza e verifica os nicks dos jogadores neste servidor (admin)",
       cmd_language: "Altera o idioma do bot para este servidor (admin)",
       cmd_help: "Mostra esta lista de comandos",
       demo_title: "Experimente ao Vivo",
-      demo_p: 'Entre no servidor demo para testar todas as funÃ§Ãµes do bot em tempo real. Registre sua conta Riot com <code style="color:#79c0ff;">!registrar Nome#TAG</code> e explore rankings, anÃ¡lises com IA e notificaÃ§Ãµes de partidas.',
+      demo_p: 'Entre no servidor demo para testar todas as fun&ccedil;&otilde;es do bot em tempo real. Registre sua conta Riot com <code style="color:#79c0ff;">!registrar Nome#TAG</code> e explore rankings, an&aacute;lises com IA e notifica&ccedil;&otilde;es de partidas.',
       btn_demo: "Entrar no Servidor Demo",
       compliance_title: "Conformidade com Riot Games",
-      compliance_p: 'O LoL Community Tracker usa apenas endpoints oficiais e documentados da <a href="https://developer.riotgames.com" target="_blank">API da Riot Games</a>. NÃ£o cria sistemas alternativos de ranking, nÃ£o cobra pelo acesso e nÃ£o utiliza logotipos ou marcas da Riot Games. NÃ£o Ã© afiliado nem endossado pela Riot Games.<br><br><a href="privacy.html">PolÃ­tica de Privacidade</a> Â· <a href="terms.html">Termos de ServiÃ§o</a>',
-      footer_text: "LoL Community Tracker nÃ£o Ã© endossado pela Riot Games. League of Legends e Riot Games sÃ£o marcas registradas da Riot Games, Inc.",
+      compliance_p: 'O LoL Community Tracker usa apenas endpoints oficiais e documentados da <a href="https://developer.riotgames.com" target="_blank">API da Riot Games</a>. N&atilde;o cria sistemas alternativos de ranking, n&atilde;o cobra pelo acesso e n&atilde;o utiliza logotipos ou marcas da Riot Games. N&atilde;o &eacute; afiliado nem endossado pela Riot Games.<br><br><a href="privacy.html">Pol&iacute;tica de Privacidade</a> &middot; <a href="terms.html">Termos de Servi&ccedil;o</a>',
+      footer_text: "LoL Community Tracker n&atilde;o &eacute; endossado pela Riot Games. League of Legends e Riot Games s&atilde;o marcas registradas da Riot Games, Inc.",
     }
   };
 
@@ -402,7 +525,7 @@
       const key = el.getAttribute("data-i18n");
       if (t[key] !== undefined) el.innerHTML = t[key];
     });
-    document.getElementById("langBtn").textContent = lang === "en" ? "ðŸ‡§ðŸ‡· PT" : "ðŸ‡ºðŸ‡¸ EN";
+    document.getElementById("langBtn").innerHTML = lang === "en" ? "&#127463;&#127479; PT" : "&#127482;&#127480; EN";
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
     const logoSrc = lang === "en" ? "logo-en.png" : "logo-pt.png";
     document.querySelectorAll(".lang-logo").forEach(img => { img.src = logoSrc; });
