@@ -112,7 +112,31 @@
     .notif-card img {
       width: 100%;
       display: block;
+      cursor: zoom-in;
     }
+
+    /* Lightbox */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: #000000d0;
+      align-items: center; justify-content: center;
+      padding: 1.5rem;
+      cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 92vw; max-height: 92vh;
+      object-fit: contain; border-radius: 8px;
+      box-shadow: 0 20px 80px #000c;
+      cursor: default;
+    }
+    #lightbox-close {
+      position: fixed; top: 1.2rem; right: 1.4rem;
+      background: #21262d; border: 1px solid #30363d; color: #c9d1d9;
+      border-radius: 6px; padding: 0.3rem 0.7rem; font-size: 0.9rem;
+      cursor: pointer; line-height: 1;
+    }
+    #lightbox-close:hover { background: #30363d; }
     .notif-card figcaption {
       padding: 0.55rem 0.9rem;
       font-size: 0.79rem;
@@ -279,7 +303,16 @@
       <img src="ss/notif-summary.png" alt="Daily summary" loading="lazy">
       <figcaption data-i18n="notif_cap5">AI-powered daily community recap</figcaption>
     </figure>
+    <figure class="notif-card">
+      <img src="ss/notif-ranking.png" alt="Community leaderboard" loading="lazy">
+      <figcaption data-i18n="notif_cap6">Full server Solo/Duo leaderboard</figcaption>
+    </figure>
   </div>
+</div>
+
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()">&#x2715; ESC</button>
+  <img id="lightbox-img" src="" alt="">
 </div>
 
 <!-- Commands section -->
@@ -388,6 +421,7 @@
       notif_cap3: "Personalized messages with stats &amp; humor",
       notif_cap4: "Community KDA leaderboard &ndash; automatic alerts",
       notif_cap5: "AI-powered daily community recap",
+      notif_cap6: "Full server Solo/Duo leaderboard",
       cmd_title: "Commands",
       cmd_th_cmd: "Command",
       cmd_th_desc: "Description",
@@ -465,6 +499,7 @@
       notif_cap3: "Mensagens personalizadas com estat&iacute;sticas e humor",
       notif_cap4: "Ranking de KDA da comunidade &ndash; alertas autom&aacute;ticos",
       notif_cap5: "Resumo di&aacute;rio da comunidade com IA",
+      notif_cap6: "Ranking completo Solo/Duo do servidor",
       cmd_title: "Comandos",
       cmd_th_cmd: "Comando",
       cmd_th_desc: "Descri&ccedil;&atilde;o",
@@ -517,7 +552,13 @@
     }
   };
 
-  let currentLang = localStorage.getItem("lang") || "en";
+  function detectLang() {
+    const saved = localStorage.getItem("lang");
+    if (saved) return saved;
+    const bl = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    return bl.startsWith("pt") ? "pt" : "en";
+  }
+  let currentLang = detectLang();
 
   function applyLang(lang) {
     const t = translations[lang];
@@ -540,6 +581,24 @@
   }
 
   applyLang(currentLang);
+
+  // Lightbox
+  const lightbox    = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  function openLightbox(src, alt) {
+    lightboxImg.src = src; lightboxImg.alt = alt;
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  document.querySelectorAll(".notif-card img").forEach(img => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+  lightbox.addEventListener("click", e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbox(); });
 
   const nav = document.querySelector("nav");
   window.addEventListener("scroll", () => {
