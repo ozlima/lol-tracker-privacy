@@ -10,6 +10,16 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://ozlima.github.io/lol-tracker/banner-en.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSWDWPTQYZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YSWDWPTQYZ');
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -588,6 +598,7 @@
     currentLang = currentLang === "en" ? "pt" : "en";
     localStorage.setItem("lang", currentLang);
     applyLang(currentLang);
+    gtag('event', 'language_toggle', { language: currentLang });
   }
 
   applyLang(currentLang);
@@ -599,6 +610,7 @@
     lightboxImg.src = src; lightboxImg.alt = alt;
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
+    gtag('event', 'lightbox_open', { image: alt });
   }
   function closeLightbox() {
     lightbox.classList.remove("open");
@@ -614,6 +626,24 @@
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 10);
   }, { passive: true });
+
+  // Button click tracking
+  document.querySelectorAll("a[href], button").forEach(el => {
+    const label =
+      el.classList.contains("cta-add") ? "add_to_server_hero" :
+      el.classList.contains("btn-add") ? "add_to_server_demo" :
+      el.classList.contains("btn-discord") ? "join_demo_server" :
+      el.classList.contains("cta") ? "view_privacy_hero" :
+      el.classList.contains("lang-toggle") ? null : // handled in toggleLang
+      el.getAttribute("href") === "privacy.html" ? "nav_privacy" :
+      el.getAttribute("href") === "terms.html" ? "nav_terms" :
+      null;
+    if (label) {
+      el.addEventListener("click", () => {
+        gtag('event', 'button_click', { button: label });
+      });
+    }
+  });
 </script>
 
 </body>
