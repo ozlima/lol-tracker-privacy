@@ -341,11 +341,12 @@
     <tr><td data-i18n="cmd_name_eloflex">!rank flex / !ranking flex</td><td data-i18n="cmd_eloflex">Flex ranking of all members</td></tr>
     <tr><td data-i18n="cmd_name_elo">!rank / !ranking [player]</td><td data-i18n="cmd_elo">Detailed elo of a player (omit name to see yours)</td></tr>
     <tr><td data-i18n="cmd_name_top">!top piores / !top melhor</td><td data-i18n="cmd_top">Community KDA ranking &ndash; worst or best players in recent games</td></tr>
+    <tr><td data-i18n="cmd_name_winstreak">!winstreak / !streak</td><td data-i18n="cmd_winstreak">Top 5 longest win streaks &ndash; with each game's KDA</td></tr>
+    <tr><td data-i18n="cmd_name_losestreak">!losestreak</td><td data-i18n="cmd_losestreak">Top 5 longest lose streaks &ndash; with each game's KDA</td></tr>
 
     <tr class="cmd-cat"><td colspan="2" data-i18n="cat_stats">&#128202; Stats</td></tr>
     <tr><td data-i18n="cmd_name_kda">!kda [player]</td><td data-i18n="cmd_kda">KDA from last 20 ranked games</td></tr>
     <tr><td data-i18n="cmd_name_maestria">!mastery / !maestria [player]</td><td data-i18n="cmd_maestria">Top 7 champion masteries</td></tr>
-    <tr><td data-i18n="cmd_name_melhor">!best / !melhor &lt;role&gt;</td><td data-i18n="cmd_melhor">Top 5 in the community by role (top &middot; jungle &middot; mid &middot; adc &middot; support)</td></tr>
     <tr><td>!ingame &nbsp;/ &nbsp;!partida</td><td data-i18n="cmd_ingame">Shows who is currently in a game</td></tr>
 
     <tr class="cmd-cat"><td colspan="2" data-i18n="cat_ai">&#129302; AI &amp; Analysis</td></tr>
@@ -454,23 +455,25 @@
       cmd_name_analisar: "!analyze / !analisar [player]",
       cmd_name_comparar: "!compare / !comparar &lt;p1&gt; vs &lt;p2&gt;",
       cmd_name_confronto: "!h2h / !confronto &lt;p1&gt; vs &lt;p2&gt;",
-      cmd_name_melhor: "!best / !melhor &lt;role&gt;",
       cmd_name_top: "!top piores / !top melhor",
+      cmd_name_winstreak: "!winstreak / !streak",
+      cmd_name_losestreak: "!losestreak",
       cmd_name_update: "!update",
       cmd_name_link: "!link &lt;Name#TAG&gt; @user",
       cmd_link: 'Link an existing player to a Discord account &ndash; e.g. <code style="color:#79c0ff">!link IDV Koala#BR1 @Koala</code> (admin)',
       cmd_name_setup: "!setup #channel",
       cmd_addplayer: 'Add your LoL account to the tracker &ndash; e.g. <code style="color:#79c0ff">!addplayer IDV Koala#BR1</code>',
       cmd_removeplayer: 'Remove your own account &ndash; admins can also pass <code style="color:#79c0ff">@user</code> or <code style="color:#79c0ff">Name#TAG</code>',
+      cmd_winstreak: "Top 5 longest win streaks &ndash; with each game's KDA",
+      cmd_losestreak: "Top 5 longest lose streaks &ndash; with each game's KDA",
       cmd_elos: "Solo/Duo ranking of all members",
       cmd_eloflex: "Flex ranking of all members",
-      cmd_elo: "Detailed elo of a player (omit name to see yours)",
+      cmd_elo: "Player's elo, LP history and last 5 ranked games (omit name for yours)",
       cmd_kda: "KDA from last 20 ranked games",
       cmd_maestria: "Top 7 champion masteries",
       cmd_analisar: "AI profile analysis &ndash; strengths, weaknesses and tips",
       cmd_comparar: "1v1 comparison between two players with AI",
       cmd_confronto: "Head-to-head history with AI commentary",
-      cmd_melhor: "Top 5 in the community by role (top &middot; jungle &middot; mid &middot; adc &middot; support)",
       cmd_ingame: "Shows who is currently in a game",
       cmd_players: "List all registered members",
       cmd_resumo: "Generate the daily community summary",
@@ -536,8 +539,9 @@
       cmd_name_analisar: "!analisar [jogador]",
       cmd_name_comparar: "!comparar &lt;j1&gt; vs &lt;j2&gt;",
       cmd_name_confronto: "!confronto &lt;j1&gt; vs &lt;j2&gt;",
-      cmd_name_melhor: "!melhor &lt;posi&ccedil;&atilde;o&gt;",
       cmd_name_top: "!top piores / !top melhor",
+      cmd_name_winstreak: "!winstreak / !streak",
+      cmd_name_losestreak: "!losestreak",
       cmd_name_update: "!update",
       cmd_name_link: "!link &lt;Nome#TAG&gt; @usuario",
       cmd_link: 'Vincula um jogador existente a uma conta Discord &ndash; ex: <code style="color:#79c0ff">!link IDV Koala#BR1 @Koala</code> (admin)',
@@ -546,13 +550,14 @@
       cmd_removeplayer: 'Remove sua pr&oacute;pria conta &ndash; admins tamb&eacute;m podem passar <code style="color:#79c0ff">@usuario</code> ou <code style="color:#79c0ff">Nome#TAG</code>',
       cmd_elos: "Ranking Solo/Duo de todos os membros",
       cmd_eloflex: "Ranking Flex de todos os membros",
-      cmd_elo: "Elo detalhado de um jogador (sem nome: mostra o seu)",
+      cmd_elo: "Elo do jogador, hist&oacute;rico de LP e &uacute;ltimas 5 partidas (sem nome: mostra o seu)",
       cmd_kda: "KDA das &uacute;ltimas 20 partidas ranked",
       cmd_maestria: "Top 7 maestrias de campe&atilde;o",
       cmd_analisar: "An&aacute;lise de perfil com IA &ndash; pontos fortes, fracos e dicas",
       cmd_comparar: "Compara&ccedil;&atilde;o 1v1 entre dois jogadores com IA",
       cmd_confronto: "Hist&oacute;rico de confrontos com coment&aacute;rio de IA",
-      cmd_melhor: "Top 5 da comunidade por posi&ccedil;&atilde;o (top &middot; jungle &middot; mid &middot; adc &middot; suporte)",
+      cmd_winstreak: "Top 5 maiores sequ&ecirc;ncias de vit&oacute;rias &ndash; mostra KDA de cada partida",
+      cmd_losestreak: "Top 5 maiores sequ&ecirc;ncias de derrotas &ndash; mostra KDA de cada partida",
       cmd_ingame: "Mostra quem est&aacute; em partida agora",
       cmd_players: "Lista todos os membros registrados",
       cmd_resumo: "Gera o resumo di&aacute;rio da comunidade neste canal",
